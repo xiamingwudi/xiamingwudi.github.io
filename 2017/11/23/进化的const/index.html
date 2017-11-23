@@ -5,7 +5,7 @@
 <li>const值在编译期间有用，在运行期间无作用</li>
 </ul>
 <p><em>const修饰的变量并不是真正的常量，它只是告诉编译器该变量不能出现在赋值符号的<br>左边；C语言中的const只是使得变量具有只读属性；const将具有全局声明周期的变量存储于只读存储区</em></p>
-<h1 id="2-C-中的const"><a href="#2-C-中的const" class="headerlink" title="2. C++中的const"></a>2. C++中的const</h1><p>先看一个例子：<br><br><img src="/2017/11/23/进化的const/const_1.png =300x200" alt=""><br><br>编译时，编译器碰到const声明时，会在符号表中存入这个const所修饰的常量。再继续编译时，如果发现使用了该常量，则直接用符号表中的值进行替换。<br><br>由于C++兼容C语言，所以仍然会给const修饰的变量分配空间，通常该内存空间不会被使用，但是在如下两个情况下才会被分配：</p>
+<h1 id="2-C-中的const"><a href="#2-C-中的const" class="headerlink" title="2. C++中的const"></a>2. C++中的const</h1><p>先看一个例子：<br><br><img src="/2017/11/23/进化的const/const_1.png" width="300px" height="200px"><br><br>编译时，编译器碰到const声明时，会在符号表中存入这个const所修饰的常量。再继续编译时，如果发现使用了该常量，则直接用符号表中的值进行替换。<br><br>由于C++兼容C语言，所以仍然会给const修饰的变量分配空间，通常该内存空间不会被使用，但是在如下两个情况下才会被分配：</p>
 <ul>
 <li>对const常量使用了关键字extern，即为外部代码使用</li>
 <li>对const常量使用了&amp;操作符，即取值</li>
@@ -34,5 +34,5 @@
 </tr>
 </tbody>
 </table>
-<p>C++中的const常量类似于宏定义，宏定义是在预处理时对文本进行替换处理，而const是在编译过程中编译器对const常量进行<font color="red">类型检查</font>和<font color="red">作用域检查</font>。<br>宏定义是由预处理处理，只是单纯的文本替换而已。<br><br><img src="/2017/11/23/进化的const/const_2.png" alt=""></p>
-</div></article></div></main><footer><div class="paginator"><a href="/2017/11/23/vimrc/" class="next">下一篇</a></div><div class="copyright"><p>© 2017 <a href="http://yoursite.com">John Doe</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-65933410-1",'auto');ga('send','pageview');</script></body></html>
+<p>C++中的const常量类似于宏定义，宏定义是在预处理时对文本进行替换处理，而const是在编译过程中编译器对const常量进行<font color="red">类型检查</font>和<font color="red">作用域检查</font>。<br>宏定义是由预处理处理，只是单纯的文本替换而已。<br><br>最后，再来一个用例感受一下。<br><br><img src="/2017/11/23/进化的const/const_2.png" width="300px" height="250px"></p>
+</div></article></div></main><footer><div class="paginator"><a href="/2017/11/23/vimrc/" class="next">NEXT</a></div><div class="copyright"><p>© 2017 <a href="http://yoursite.com">John Doe</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-65933410-1",'auto');ga('send','pageview');</script></body></html>
