@@ -14,7 +14,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/11/23/进化的const/index.html">
 <meta property="og:site_name" content="My tech blog">
 <meta property="og:description" content="1. C语言中的const const修饰的变量是只读的，其本质仍然是变量 const修饰的局部变量在栈上分配空间，可以根据指针去修改其中的值 const修饰的全局变量在只读存储区分配空间 const值在编译期间有用，在运行期间无作用  const修饰的变量并不是真正的常量，它只是告诉编译器该变量不能出现在赋值符号的左边；C语言中的const只是使得变量具有只读属性；const将具有全局声明周期的">
-<meta property="og:updated_time" content="2017-11-23T07:01:51.000Z">
+<meta property="og:updated_time" content="2017-11-23T08:40:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="进化的const">
 <meta name="twitter:description" content="1. C语言中的const const修饰的变量是只读的，其本质仍然是变量 const修饰的局部变量在栈上分配空间，可以根据指针去修改其中的值 const修饰的全局变量在只读存储区分配空间 const值在编译期间有用，在运行期间无作用  const修饰的变量并不是真正的常量，它只是告诉编译器该变量不能出现在赋值符号的左边；C语言中的const只是使得变量具有只读属性；const将具有全局声明周期的">
@@ -172,6 +172,7 @@
 <li>const值在编译期间有用，在运行期间无作用</li>
 </ul>
 <p><em>const修饰的变量并不是真正的常量，它只是告诉编译器该变量不能出现在赋值符号的<br>左边；C语言中的const只是使得变量具有只读属性；const将具有全局声明周期的变量存储于只读存储区</em></p>
+<a id="more"></a>
 <h1 id="2-C-中的const"><a href="#2-C-中的const" class="headerlink" title="2. C++中的const"></a>2. C++中的const</h1><p>先看一个例子：<br></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span> c = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span>* p = (<span class="keyword">int</span>*c)&amp;c;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; p &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	</span><br><span class="line">	*p = <span class="number">5</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; c &lt;&lt; <span class="built_in">endl</span>;   <span class="comment">//只输出0</span></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; *p &lt;&lt; <span class="built_in">endl</span>;  <span class="comment">//输出5，这是为什么？</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>编译时，编译器碰到const声明时，会在符号表中存入这个const所修饰的常量。再继续编译时，如果发现使用了该常量，则直接用符号表中的值进行替换。<br><br>由于C++兼容C语言，所以仍然会给const修饰的变量分配空间，通常该内存空间不会被使用，但是在如下两个情况下才会被分配：</p>
