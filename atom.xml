@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-23T05:18:25.000Z</updated>
+  <updated>2017-11-23T05:45:51.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>进化的const</title>
+    <link href="http://yoursite.com/2017/11/23/%E8%BF%9B%E5%8C%96%E7%9A%84const/"/>
+    <id>http://yoursite.com/2017/11/23/进化的const/</id>
+    <published>2017-11-23T05:21:45.000Z</published>
+    <updated>2017-11-23T05:45:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-C语言中的const"><a href="#1-C语言中的const" class="headerlink" title="1. C语言中的const"></a>1. C语言中的const</h1><ul><li>const修饰的变量是<font color="red">只读</font>的，其本质仍然是变量</li><li>const修饰的<font color="blue">局部变量</font>在栈上分配空间，可以根据指针去修改其中的值</li><li>const修饰的<font color="blue">全局变量</font>在只读存储区分配空间</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;1-C语言中的const&quot;&gt;&lt;a href=&quot;#1-C语言中的const&quot; class=&quot;headerlink&quot; title=&quot;1. C语言中的const&quot;&gt;&lt;/a&gt;1. C语言中的const&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;const修饰的变量是&lt;font color
+      
+    
+    </summary>
+    
+      <category term="C++" scheme="http://yoursite.com/categories/C/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>vimrc</title>
