@@ -1,231 +1,202 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-  
-  
+    <meta charset="UTF-8" />
+
+    
+
+    
+
+    <title>Hexo</title>
+    <meta name="author" content="John Doe" />
+    <meta name="version" content="1.0.0" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <meta name="baidu-site-verification" content="F0CXvmUgA9" />
+
+    
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    
+    
     <link rel="icon" href="/favicon.png">
-  
-  <link type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/scrollUp/image.css">
-  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
-  
+    
+
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <div class="logo">
-        <img src="/logo.png" alt="Profile Picture">
-      </div>
-      <div id="title">Hexo</div>
-      
-       <ul class="my-socials">
-  
- 
-</ul>
+
+    <div class="app">
+        <header class="header clearfix">
+    <div id="nav" class="nav">
+    <button id="open-panel" class="open-panel"><i class="icon-library"></i></button>
+
+    <nav class="nav-inner">
+
+        <li class="nav-item active">
+            <a class="nav-link" href="/">首页</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/categories/front-end">前端</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/categories/back-end">后端</a>
+        </li>
+
+        <li class="nav-item nav-item-tag">
+            <a id="nav-tag" class="nav-link" href="#">标签</a>
+            <div id="nav-tags" class="nav-tag-wrap">
+                <i class="nav-tag-arrow"></i>
+                
+
+            </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="/archives">归档</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/atom.xml">订阅</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/about">关于</a>
+        </li>
+
+    </nav>
+</div>
+
+    <aside id="aside" class="aside">
+    <div id="aside-mask" class="aside-mask"></div>
+    <div id="aside-inner" class="aside-inner">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"><i class="icon-search-stroke"></i></button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+
+        
+        
+
+        
+        <div class="author-meta">
+            <div class="author-avatar">
+                <a href="/">
+                    <img src="/images/avatar.jpg" title="Sanonz">
+                </a>
+            </div>
+            <div class="author-name">XiaMing</div>
+            <div class="author-work">Background development</div>
+            <div class="author-location">
+                <i class="icon-location vm"></i>
+                <span class="vm">Beijing, China</span>
+            </div>
+            <div class="author-thread-wrap">
+                <div class="author-threads clearfix">
+                    <a class="thread-item" href="https://github.com/sanonz" target="_blank"><i class="icon-github"></i></a>
+                    <a class="thread-item" href="http://m.timegoto.com/user/1" target="_blank"><i class="icon-circle-more"></i></a>
+                    <a class="thread-item" href="https://twitter.com/sanonze" target="_blank"><i class="icon-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        
     </div>
-  </div>
-  <div id="header-inner" class="">
-    <nav id="main-nav">
-      <a id="main-nav-toggle" class="nav-icon"></a>
-      <!--
-        
-          
-            <a class="main-nav-link" href="/">首页</a>
-          
-            <a class="main-nav-link" href="/categories/life">生活</a>
-          
-            <a class="main-nav-link" href="/archives">归档</a>
-          
-        
-      -->
-    </nav>
-    <nav id="title-nav" style="display:none">
-      <a href="/">Hexo</a>
-      <img src="/logo.png" alt="Profile Picture">
-      <!--
-      <span id="title-nav-socials">
-        
-       
-     </span>
-      -->
-    </nav>
-    <nav id="sub-nav">
-      
-      <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-    </nav>
-    <div id="search-form-wrap">
-      <form action="http://www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
-        <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Pesquisar">
-        <input type="submit" value="" class="search-form-submit">
-        <input name=tn type=hidden value="bds">
-        <input name=cl type=hidden value="3">
-        <input name=ct type=hidden value="2097152">
-        <input type="hidden" name="si" value="yoursite.com">
-      </form>
-    </div>
-  </div>
-  <div class="site-nav" style="display: none;">
-    <ul>
-      
-      
-        <li><a href="/">首页</a></li>
-      
-        <li><a href="/categories/life">生活</a></li>
-      
-        <li><a href="/archives">归档</a></li>
-      
-      
-    </ul>
-  </div>
+</aside>
+
 </header>
-      <div class="outer">
-        <section id="main">
-  
 
+        <div id="content" class="content">
+    <article class="article" itemscope itemprop="blogPost">
     
-    <article id="post-mac-software" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/11/23/mac-software/" class="article-date">
-  <time datetime="2017-11-23T01:20:13.000Z" itemprop="datePublished">2017-11-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/23/mac-software/">mac software</a>
-    </h1>
-  
-
-      </header>
+        <h1 itemprop="name">
+            <a href="/2017/11/23/mac-software/">mac software</a>
+        </h1>
+        
+        <div class="article-meta clearfix">
+            <a class="article-date" href="/2017/11/23/mac-software/">
     
-    <div class="article-entry" itemprop="articleBody">
-      
+    <i class="icon-calendar"></i>
+    
+    <time datetime="2017-11-23T01:20:13.000Z" itemprop="datePublished">2017-11-23</time>
+</a>
+
+            
+
+        </div>
+    </header>
+    
+    <section class="article-body markdown-body">
+        
         <h1 id="MAC-常用的软件"><a href="#MAC-常用的软件" class="headerlink" title="MAC 常用的软件"></a>MAC 常用的软件</h1><hr>
 <h2 id="工作软件"><a href="#工作软件" class="headerlink" title="工作软件"></a>工作软件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">- Microsoft office 2017     # office全家桶</span><br><span class="line">- Xmind 8.0                 # 脑图</span><br><span class="line">- secureCRT 8.0.2           # 主要用来上传和下载文件</span><br><span class="line">- iTerm2                    # 登陆服务器操作和写代码</span><br><span class="line">- OmniGraffle               # 绘画流程图以及UML</span><br><span class="line">- Beyond Compare            # (代码)文件和目录对比</span><br><span class="line">- CHM Reader                # 查看chm格式的文档</span><br><span class="line">- atom/CLion/VS code        # 阅读各种代码文件利器</span><br><span class="line">- PDF Expert                # 阅读pdf文件</span><br><span class="line">- Mou                       # 编写Markdown文本</span><br><span class="line">- VirtualBox                # 虚拟机</span><br></pre></td></tr></table></figure>
 <hr>
 <h2 id="系统软件"><a href="#系统软件" class="headerlink" title="系统软件"></a>系统软件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">- chrome                    #主力浏览器</span><br><span class="line">- BetterZip                 #压缩和解压</span><br><span class="line">- QQ/微信                   #主力聊天工具</span><br><span class="line">- Android文件传输           # 连接安卓设备软件</span><br><span class="line">- Bartender 2               # 菜单栏优化</span><br><span class="line">- Dr. Cleaner Pro           # 清理垃圾和卸载软件</span><br><span class="line">- IINA                      # 视频播放器</span><br><span class="line">- Karabiner                 # 键盘映射软件</span><br><span class="line">- TinyCal                   # 日历软件</span><br><span class="line">- QQ音乐/网易云音乐/虾米    # 音乐播放器</span><br><span class="line">- ScreenFlow                # 视频录制</span><br><span class="line">- Scroll Reverser           # 鼠标和触摸板的滚动方向设置</span><br><span class="line">- ShadowsocksX              # 翻墙必备</span><br><span class="line">- Alternote                 # 基于印象笔记的笔记软件</span><br><span class="line">- YoMail/Spark              # 轻量级的邮箱软件</span><br><span class="line">- PDFProtector              # 加密pdf软件</span><br></pre></td></tr></table></figure>
 <hr>
 
-      
-    </div>
-    <footer class="article-footer">
-      
-        <a data-url="http://yoursite.com/2017/11/23/mac-software/" data-id="cjabwvhkg0001ta07kunx1ixy" class="article-share-link">Compartilhar</a>
-      
-
-      
-    </footer>
-  </div>
-  
+        
+    </section>
 </article>
 
 
+    <article class="article" itemscope itemprop="blogPost">
     
-  
-
-    
-    <article id="post-firstBlog" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/11/23/firstBlog/" class="article-date">
-  <time datetime="2017-11-22T17:17:30.000Z" itemprop="datePublished">2017-11-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/23/firstBlog/">firstBlog</a>
-    </h1>
-  
-
-      </header>
+        <h1 itemprop="name">
+            <a href="/2017/11/23/firstBlog/">firstBlog</a>
+        </h1>
+        
+        <div class="article-meta clearfix">
+            <a class="article-date" href="/2017/11/23/firstBlog/">
     
-    <div class="article-entry" itemprop="articleBody">
-      
+    <i class="icon-calendar"></i>
+    
+    <time datetime="2017-11-22T17:17:30.000Z" itemprop="datePublished">2017-11-23</time>
+</a>
+
+            
+
+        </div>
+    </header>
+    
+    <section class="article-body markdown-body">
+        
         <h2 id="1-夏明的博客"><a href="#1-夏明的博客" class="headerlink" title="1. 夏明的博客"></a>1. 夏明的博客</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int main()&#123;</span><br><span class="line">	retrun 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-      
-    </div>
-    <footer class="article-footer">
-      
-        <a data-url="http://yoursite.com/2017/11/23/firstBlog/" data-id="cjabwvhkc0000ta077ykyv3sm" class="article-share-link">Compartilhar</a>
-      
-
-      
-    </footer>
-  </div>
-  
+        
+    </section>
 </article>
 
 
-    
-  
-  
-</section>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 John Doe<br>
-      Theme <a href="https://github.com/henryhuang/oishi" target="_blank">Oishi</a>, Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
+
+
+
+</div>
+        <footer class="footer">
+    Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>, Theme by <a href="https://github.com/sanonz/hexo-theme-concise" target="_blank">Concise</a>
 </footer>
     </div>
-    <!--
-      <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">首页</a>
-  
-    <a href="/categories/life" class="mobile-nav-link">生活</a>
-  
-    <a href="/archives" class="mobile-nav-link">归档</a>
-  
-</nav>
-    -->
-    
 
-<!-- 百度分享 start -->
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var nodes = {
+                nav: $('#nav'),
+                aside: $('#aside'),
+                navTags: $('#nav-tags')
+            };
 
-<!-- 百度分享 end -->
+            $('#open-panel, #aside-mask').on('click', function() {
+                nodes.aside.toggleClass('panel-show');
+            });
+            $('#nav-tag').on('click', function(event) {
+                event.preventDefault();console.log(nodes.navTags.attr('class'))
+                nodes.navTags.toggleClass('tag-show');console.log(nodes.navTags.attr('class'))
+            })/*.hover(function() {
+                nodes.navTags.addClass('tag-show');
+            }, function() {
+                nodes.navTags.removeClass('tag-show');
+            });*/
+        });
+    </script>
 
-<script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-
-
-
-<script src="/js/jquery.scrollUp.min.js"></script>
-<script src="/js/jquery.transform.js"></script>
-<script src="/js/menu.js"></script>
-
-<script src="/js/script.js"></script>
-<script src="/js/scrollUp.js"></script>
-
-  </div>
 </body>
 </html>
