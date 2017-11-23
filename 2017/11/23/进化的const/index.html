@@ -87,7 +87,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/11/23/进化的const/index.html">
 <meta property="og:site_name" content="SheldonXia&#39;s Blog">
 <meta property="og:description" content="1. C语言中的const const修饰的变量是只读的，其本质仍然是变量 const修饰的局部变量在栈上分配空间，可以根据指针去修改其中的值 const修饰的全局变量在只读存储区分配空间 const值在编译期间有用，在运行期间无作用  const修饰的变量并不是真正的常量，它只是告诉编译器该变量不能出现在赋值符号的左边；C语言中的const只是使得变量具有只读属性；const将具有全局声明周期的">
-<meta property="og:updated_time" content="2017-11-23T08:40:16.000Z">
+<meta property="og:updated_time" content="2017-11-23T15:58:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="进化的const">
 <meta name="twitter:description" content="1. C语言中的const const修饰的变量是只读的，其本质仍然是变量 const修饰的局部变量在栈上分配空间，可以根据指针去修改其中的值 const修饰的全局变量在只读存储区分配空间 const值在编译期间有用，在运行期间无作用  const修饰的变量并不是真正的常量，它只是告诉编译器该变量不能出现在赋值符号的左边；C语言中的const只是使得变量具有只读属性；const将具有全局声明周期的">
@@ -186,7 +186,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -196,7 +196,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -260,7 +260,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-23T13:21:45+08:00">
                 2017-11-23
@@ -281,7 +281,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">in</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -339,28 +339,8 @@
 </ul>
 <p>需要注意的是，C++编译器虽然可能会为const常量分配空间，但是不会使用其中的存储值，这么做仅仅是为了兼容C语言，这也能解释了上面例子中注释所标注的结果。</p>
 <h1 id="3-符号表"><a href="#3-符号表" class="headerlink" title="3. 符号表"></a>3. 符号表</h1><p><strong><font color="blue">符号表</font></strong>是编译器在编译过程中产生的表，该表示编译器内部使用的一种数据结构，比如，当定义了 <em><font color="red">const int c = 0;</font></em> 此时编译器就会将c与0存入符号表中，当编译到使用c的地方时，直接从符号表中取出c对应的值进行替换。</p>
-<table>
-<thead>
-<tr>
-<th>name</th>
-<th>value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td> …</td>
-<td>…</td>
-</tr>
-<tr>
-<td>c</td>
-<td>0</td>
-</tr>
-<tr>
-<td> …</td>
-<td>…</td>
-</tr>
-</tbody>
-</table>
+<table><br>    <tr><br>        <th>name</th><br>        <th>value</th><br>    </tr><br>    <tr><br>        <th>…</th><br>        <th>…</th><br>    </tr><br>    <tr><br>        <th>c</th><br>        <th>0</th><br>    </tr><br>    <tr><br>        <th>…</th><br>        <th>…</th><br>    </tr><br></table>
+
 <p>C++中的const常量类似于宏定义，宏定义是在预处理时对文本进行替换处理，而const是在编译过程中编译器对const常量进行<font color="red">类型检查</font>和<font color="red">作用域检查</font>。<br>宏定义是由预处理处理，只是单纯的文本替换而已。<br><br>最后，再来一个用例感受一下。<br></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="meta">#<span class="meta-keyword">define</span> a 3</span></span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span> b = <span class="number">4</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">g</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	 * g()中可以访问到f()中定义的宏，这是因为宏定义是预处理器处理的，直接进行文本替换；</span></span><br><span class="line"><span class="comment">	 * 而编译器并不知道宏是什么，即编译器看到的a就是3，没有机会对宏进行作用域检查</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; a &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span> A = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span> B = <span class="number">2</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	 * C语言中会报错，因为A和B都是变量</span></span><br><span class="line"><span class="comment">	 * C++中不会报错，因为A和B是真正的常量</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">int</span> <span class="built_in">array</span>[A + B] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;(A+B); i++)&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="built_in">array</span>[i] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	f();</span><br><span class="line">	g();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -453,10 +433,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -477,7 +457,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">5</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
             
@@ -488,7 +468,7 @@
               <div class="site-state-item site-state-categories">
                 
                   <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">categories</span>
+                  <span class="site-state-item-name">Kategorien</span>
                 
               </div>
             
@@ -561,7 +541,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
