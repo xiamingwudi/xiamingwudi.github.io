@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-23T08:40:06.000Z</updated>
+  <updated>2017-11-24T03:05:59.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>手动安装YCM</title>
+    <link href="http://yoursite.com/2017/11/24/%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85YCM/"/>
+    <id>http://yoursite.com/2017/11/24/手动安装YCM/</id>
+    <published>2017-11-24T02:56:52.000Z</published>
+    <updated>2017-11-24T03:05:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;对于常年使用vim的我来说，是多么希望vim拥有与IDE一样的可以实现类成员访问或者自动补全关键字、函数名等各种神奇的操作，通过Google发现，vim中有一个神奇的插件，即<strong><font color="blue">YouCompleteMe</font></strong>，简称YCM，如果机器可以连接外网的话，是可以通过vundle直接在线安装的，可惜公司内部的开发测试机都是无法访问外网的，所以只能自己去折腾手动安装YCM的方法了，不废话了，下面就来详细说一下具体安装方式。</p><a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;对于常年使用vim的我来说，是多么希望vim拥有与IDE一样的可以实现类成员访问或者自动补全关键字、函数名等各种神奇的操作，通过Google发现，vim中有一个神奇的插件，即&lt;strong&gt;&lt;font color=&quot;blue&quot;&gt;YouCompleteMe&lt;/font&gt;&lt;/strong&gt;，简称YCM，如果机器可以连接外网的话，是可以通过vundle直接在线安装的，可惜公司内部的开发测试机都是无法访问外网的，所以只能自己去折腾手动安装YCM的方法了，不废话了，下面就来详细说一下具体安装方式。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="vim相关笔记" scheme="http://yoursite.com/categories/vim%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>引用的本质分析</title>
