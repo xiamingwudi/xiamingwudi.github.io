@@ -88,7 +88,7 @@
 <meta property="og:site_name" content="SheldonXia&#39;s Blog">
 <meta property="og:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;对于常年使用vim的我来说，是多么希望vim拥有与IDE一样的可以实现类成员访问或者自动补全关键字、函数名等各种神奇的操作，通过Google发现，vim中有一个神奇的插件，即YouCompleteMe，简称YCM，如果机器可以连接外网的话，是可以通过vundle直接在线安装的，可惜公司内部的开发测试机都是无法访问外网的，所以只">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-24T03:05:59.000Z">
+<meta property="og:updated_time" content="2017-11-24T03:16:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="手动安装YCM">
 <meta name="twitter:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;对于常年使用vim的我来说，是多么希望vim拥有与IDE一样的可以实现类成员访问或者自动补全关键字、函数名等各种神奇的操作，通过Google发现，vim中有一个神奇的插件，即YouCompleteMe，简称YCM，如果机器可以连接外网的话，是可以通过vundle直接在线安装的，可惜公司内部的开发测试机都是无法访问外网的，所以只">
@@ -345,6 +345,59 @@
       
         <p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;对于常年使用vim的我来说，是多么希望vim拥有与IDE一样的可以实现类成员访问或者自动补全关键字、函数名等各种神奇的操作，通过Google发现，vim中有一个神奇的插件，即<strong><font color="blue">YouCompleteMe</font></strong>，简称YCM，如果机器可以连接外网的话，是可以通过vundle直接在线安装的，可惜公司内部的开发测试机都是无法访问外网的，所以只能自己去折腾手动安装YCM的方法了，不废话了，下面就来详细说一下具体安装方式。</p>
 <a id="more"></a>
+<h1 id="YCM安装的前期准备"><a href="#YCM安装的前期准备" class="headerlink" title="YCM安装的前期准备"></a>YCM安装的前期准备</h1><ul>
+<li>系统环境</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th>Centos 6.3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>kernel</td>
+<td>2.6.32</td>
+</tr>
+<tr>
+<td>——-</td>
+<td>————</td>
+</tr>
+<tr>
+<td>gcc</td>
+<td>4.4.6</td>
+</tr>
+<tr>
+<td>——-</td>
+<td>————</td>
+</tr>
+<tr>
+<td>cmake</td>
+<td>3.4.1</td>
+</tr>
+<tr>
+<td>——-</td>
+<td>————</td>
+</tr>
+<tr>
+<td>llvm</td>
+<td>3.3</td>
+</tr>
+<tr>
+<td>——-</td>
+<td>————</td>
+</tr>
+<tr>
+<td>ycm</td>
+<td>最新版源码即可</td>
+</tr>
+<tr>
+<td>——-</td>
+<td>————</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
@@ -429,8 +482,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -513,6 +575,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#YCM安装的前期准备"><span class="nav-number">1.</span> <span class="nav-text">YCM安装的前期准备</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
