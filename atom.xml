@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-27T03:02:33.000Z</updated>
+  <updated>2017-12-06T09:22:38.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>函数重载分析</title>
+    <link href="http://yoursite.com/2017/12/06/%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD%E5%88%86%E6%9E%90/"/>
+    <id>http://yoursite.com/2017/12/06/函数重载分析/</id>
+    <published>2017-12-06T09:16:26.000Z</published>
+    <updated>2017-12-06T09:22:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="重载的概念"><a href="#重载的概念" class="headerlink" title="重载的概念"></a>重载的概念</h1><p>重载（overload）：同一个标示符在不同上下文具有不同的含义。<br><br>比如：“洗”和不同的词汇搭配具有不同的含义，如洗衣服、洗脸、洗脑等等。<br><br>重载这个概念在自然语言中随处可见，那么程序设计中是否也包含重载呢？</p><a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;重载的概念&quot;&gt;&lt;a href=&quot;#重载的概念&quot; class=&quot;headerlink&quot; title=&quot;重载的概念&quot;&gt;&lt;/a&gt;重载的概念&lt;/h1&gt;&lt;p&gt;重载（overload）：同一个标示符在不同上下文具有不同的含义。&lt;br&gt;&lt;br&gt;比如：“洗”和不同的词汇搭配具有不同的含义，如洗衣服、洗脸、洗脑等等。&lt;br&gt;&lt;br&gt;重载这个概念在自然语言中随处可见，那么程序设计中是否也包含重载呢？&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="C++" scheme="http://yoursite.com/categories/C/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>手动安装YCM</title>
