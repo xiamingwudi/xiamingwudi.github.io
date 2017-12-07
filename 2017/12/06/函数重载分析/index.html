@@ -88,7 +88,7 @@
 <meta property="og:site_name" content="SheldonXia&#39;s Blog">
 <meta property="og:description" content="重载的概念重载（overload）：同一个标示符在不同上下文具有不同的含义。比如：“洗”和不同的词汇搭配具有不同的含义，如洗衣服、洗脸、洗脑等等。重载这个概念在自然语言中随处可见，那么程序设计中是否也包含重载呢？">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-06T09:22:38.000Z">
+<meta property="og:updated_time" content="2017-12-07T06:34:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="函数重载分析">
 <meta name="twitter:description" content="重载的概念重载（overload）：同一个标示符在不同上下文具有不同的含义。比如：“洗”和不同的词汇搭配具有不同的含义，如洗衣服、洗脸、洗脑等等。重载这个概念在自然语言中随处可见，那么程序设计中是否也包含重载呢？">
@@ -379,6 +379,34 @@
       
         <h1 id="重载的概念"><a href="#重载的概念" class="headerlink" title="重载的概念"></a>重载的概念</h1><p>重载（overload）：同一个标示符在不同上下文具有不同的含义。<br><br>比如：“洗”和不同的词汇搭配具有不同的含义，如洗衣服、洗脸、洗脑等等。<br><br>重载这个概念在自然语言中随处可见，那么程序设计中是否也包含重载呢？</p>
 <a id="more"></a>
+<h1 id="C-的函数重载"><a href="#C-的函数重载" class="headerlink" title="C++的函数重载"></a>C++的函数重载</h1><h2 id="函数重载"><a href="#函数重载" class="headerlink" title="函数重载"></a>函数重载</h2><p><strong>函数重载</strong>：用一个函数名定义不同的函数，当函数名和不同的参数搭配时函数的意义不同。<br><br>函数重载至少满足下面的一个条件：</p>
+<ol>
+<li>参数个数不同</li>
+<li>参数类型不同</li>
+<li>参数顺序不同</li>
+</ol>
+<p>比如：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">func</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">func</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">func</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>* s)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">strlen</span>(s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="思考：当函数重载遇到函数默认参数会发生什么？"><a href="#思考：当函数重载遇到函数默认参数会发生什么？" class="headerlink" title="思考：当函数重载遇到函数默认参数会发生什么？"></a>思考：当函数重载遇到函数默认参数会发生什么？</h2><p>先看个例子感受下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">func</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="keyword">int</span> c=<span class="number">0</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> a * b * c;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">func</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; func(<span class="number">1</span>, <span class="number">2</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>编译结果如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">test.cpp: In <span class="keyword">function</span> <span class="string">'int main()'</span>:</span><br><span class="line">test.cpp:34:22: error: call of overloaded <span class="string">'func(int, int)'</span> is ambiguous</span><br><span class="line">     cout &lt;&lt; func(1, 2) &lt;&lt; endl;</span><br><span class="line">                      ^</span><br><span class="line">test.cpp:34:22: note: candidates are:</span><br><span class="line">test.cpp:25:5: note: int func(int, int, int)</span><br><span class="line"> int func(int a, int b, int c=0)&#123;</span><br><span class="line">     ^</span><br><span class="line">test.cpp:29:5: note: int func(int, int)</span><br><span class="line"> int func(int a, int b)&#123;</span><br><span class="line">     ^</span><br></pre></td></tr></table></figure>
+<p>从编译结果中可以看出，虽然两个func构成了重载关系，但是使用的时候，编译器却不知道使用哪个函数，所以参会报错。</p>
+<h2 id="编译调用重载函数的准则"><a href="#编译调用重载函数的准则" class="headerlink" title="编译调用重载函数的准则"></a>编译调用重载函数的准则</h2><ol>
+<li>将所以同名函数作为候选者</li>
+<li>尝试寻找可行的候选函数</li>
+</ol>
+<ul>
+<li><strong><font color="blue">精确匹配</font></strong>实参</li>
+<li>通过<strong><font color="blue">默认参数匹配</font></strong>实参</li>
+<li>通过<strong><font color="blue">默认类型转换匹配</font></strong>实参</li>
+</ul>
+<ol>
+<li>匹配失败</li>
+</ol>
+<ul>
+<li>最终寻找到的候选函数不唯一，则出现二义性，编译失败</li>
+<li>无法匹配所有的后选者，函数未定义，编译失败</li>
+</ul>
 
       
     </div>
@@ -570,7 +598,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#重载的概念"><span class="nav-number">1.</span> <span class="nav-text">重载的概念</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#重载的概念"><span class="nav-number">1.</span> <span class="nav-text">重载的概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-的函数重载"><span class="nav-number">2.</span> <span class="nav-text">C++的函数重载</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#函数重载"><span class="nav-number">2.1.</span> <span class="nav-text">函数重载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思考：当函数重载遇到函数默认参数会发生什么？"><span class="nav-number">2.2.</span> <span class="nav-text">思考：当函数重载遇到函数默认参数会发生什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编译调用重载函数的准则"><span class="nav-number">2.3.</span> <span class="nav-text">编译调用重载函数的准则</span></a></li></ol></li></ol></div>
             
 
           </div>
